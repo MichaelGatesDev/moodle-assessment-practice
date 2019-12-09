@@ -118,7 +118,8 @@ for (let i = 0; i < files.length; i++) {
 
     // WRITE RESULTS
     if (output) {
-        fs.writeFileSync("exam.json", JSON.stringify(quizzes, null, 4));
+        if (!fs.existsSync("_output")) fs.mkdirSync("_output");
+        fs.writeFileSync(path.resolve("_output/exam.json"), JSON.stringify(quizzes, null, 4));
         console.log("Exam written to exam.json");
     }
 }

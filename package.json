@@ -5,8 +5,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start:print": "node index.js --print _temp",
-    "start:write": "node index.js --output _temp",
+    "start:print": "node index.js --print _input",
+    "start:output": "node index.js --output _input",
     "build": "pkg ."
   },
   "devDependencies": {
